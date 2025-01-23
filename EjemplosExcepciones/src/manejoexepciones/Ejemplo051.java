@@ -16,7 +16,7 @@ public class Ejemplo051 {
 
     public static void main(String[] args) {
         boolean bandera = true;
-        
+
         while (bandera) {
             try {
                 Scanner entrada = new Scanner(System.in);
@@ -27,6 +27,11 @@ public class Ejemplo051 {
                 int resultado = valor1 / valor2;
 
                 System.out.printf("Resultado %d\n", resultado);
+                /*
+                Se le da bandera = false al final ya que asumimos que todo lo 
+                anterior esta correcto lo cual le decimos que ya queremos salir
+                del ciclo
+                 */
                 bandera = false;
             } catch (InputMismatchException inputMismatchException) {
 
