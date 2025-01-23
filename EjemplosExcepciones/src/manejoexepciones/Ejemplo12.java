@@ -36,6 +36,10 @@ public class Ejemplo12 {
                 int resultado = valor1 / valor2;
                 //System.out.println(resultado);
                 resultados[contador] = resultado;
+                /*
+                se pone el contador al final ya que asumimos que todo lo anterior
+                esta bien y podemos pasar a la siguiente posicion
+                */
                 contador = contador + 1;
 
             } catch (ArithmeticException e) {
