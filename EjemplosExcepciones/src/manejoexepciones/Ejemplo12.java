@@ -4,6 +4,7 @@
  */
 package manejoexepciones;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -37,9 +38,15 @@ public class Ejemplo12 {
                 resultados[contador] = resultado;
                 contador = contador + 1;
 
+            } catch (ArithmeticException e) {
+                System.out.printf("(ArithmeticException) Ocurrió una "
+                        + "excepción %s\n", e);
+            } catch (InputMismatchException e) {
+                System.out.printf("(InputMismatchException) Ocurrió una "
+                        + "excepción %s\n", e);
+                entrada.nextLine();
             } catch (Exception e) {
-
-                System.out.printf("Ocurrió una excepción de tipo: %s\n", e);
+                System.out.printf("Ocurrió una excepción %s\n", e);
                 entrada.nextLine();
             }
         }
