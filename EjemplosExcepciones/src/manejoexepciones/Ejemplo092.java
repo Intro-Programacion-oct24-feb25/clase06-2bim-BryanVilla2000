@@ -22,10 +22,11 @@ public class Ejemplo092 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
+        String pais="";
         while (bandera) {
             try {
                 System.out.println("ingrese el nombre de un pais");
-                String pais = entrada.nextLine();
+                pais = entrada.nextLine();
                 pais = pais.toLowerCase();
                 char inicial = pais.charAt(0);
                 if (inicial != 'a' && inicial != 'e' && inicial != 'i'
@@ -36,9 +37,10 @@ public class Ejemplo092 {
                     
                 }
 
-                System.out.printf("Resultado %s\n", pais);
+                
             } catch (Exception e) {
                 System.out.printf("Ocurrió una excepción %s\n", e);
+                System.out.printf("Resultado %s\n", pais);
             }
         }
     }
