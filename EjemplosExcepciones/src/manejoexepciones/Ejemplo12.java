@@ -21,27 +21,26 @@ public class Ejemplo12 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-
+        int contador = 0;
         System.out.println("Ingrese cuantas operaciones quiere realizar");
         int valor = entrada.nextInt();
         int[] resultados = new int[valor];
-        for (int i = 0; i < resultados.length; i++) {
-            boolean repetir = true;
-            while (repetir) {
-                try {
-                    System.out.println("Ingrese valor 1:");
-                    int valor1 = entrada.nextInt();
-                    System.out.println("Ingrese valor 2:");
-                    int valor2 = entrada.nextInt();
-                    int resultado = valor1 / valor2;
-                    System.out.println(resultado);
-                    resultados[i] = resultado;
-                    repetir = false;
 
-                } catch (Exception e) {
-                    repetir = false;
-                    System.out.printf("Ocurrió una excepción %s\n", e);
-                }
+        while (contador < resultados.length) {
+            try {
+                System.out.println("Ingrese valor 1:");
+                int valor1 = entrada.nextInt();
+                System.out.println("Ingrese valor 2:");
+                int valor2 = entrada.nextInt();
+                int resultado = valor1 / valor2;
+                //System.out.println(resultado);
+                resultados[contador] = resultado;
+                contador = contador + 1;
+
+            } catch (Exception e) {
+
+                System.out.printf("Ocurrió una excepción de tipo: %s\n", e);
+                entrada.nextLine();
             }
         }
 
