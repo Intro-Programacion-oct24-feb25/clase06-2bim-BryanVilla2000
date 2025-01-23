@@ -43,7 +43,7 @@ public class Ejemplo12 {
                 entrada.nextLine();
             }
         }
-
+        System.out.println("RESULTADOS");
         for (int i = 0; i < resultados.length; i++) {
             System.out.println(resultados[i]);
         }
